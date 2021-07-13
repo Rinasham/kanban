@@ -1,0 +1,12 @@
+{% extends "kanban/base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-5">サインアップ</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn mt-5 btn-success btn-block">登録</button>
+    </form>
+</div>
+{% endblock %}

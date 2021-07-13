@@ -1,0 +1,17 @@
+{% extends "kanban/base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="mx-auto" style="width: 500px;">
+        <h1 class="text-center display-3 py-5">To Do List</h1>
+        <p class="text-center">Created by Rina</p>
+        
+        <hr class="my-4">
+        <p class="lead text-center py-4">ログインしてネ</p>
+        <div class="row justify-content-center">
+            <a class="btn btn-success mx-3" href="{% url 'login' %}" role="button">ログイン</a>
+            <a class="btn btn-success mx-3" href="{% url 'kanban:signup' %}" role="button">サインアップ</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

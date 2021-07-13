@@ -1,0 +1,15 @@
+{% extends "kanban/base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center mb-5">リスト編集</h1>
+    <div class="row justify-content-center">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-success btn-block mt-5">送信</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

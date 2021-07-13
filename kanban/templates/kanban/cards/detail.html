@@ -1,0 +1,18 @@
+{% extends "kanban/base.html" %}
+
+{% block content %}
+
+<div class="container" style="width:700px">
+    <div class="text-center">
+        <h1 class="py-5">カード詳細</h1>
+        <table class="table-striped mx-auto mb-5">
+            <tr><td class="col-6">タイトル</td><td class="col-6">{{ card.title }}</td></tr>
+            <tr><td>詳細</td><td>{{ card.description }}</td></tr>
+            <tr><td>リスト名</td><td>{{ card.list.title }}</td></tr>
+            <tr><td>ユーザー名</td><td>{{ card.user.username }}</td></tr>
+        </table>
+            <a class="btn btn-primary" href="{% url 'kanban:cards_update' card.pk  %}" role="button">編集 <i class="fas fa-pen"></i></a>
+            <a class="btn btn-danger" href="{% url 'kanban:cards_delete' card.pk  %}" role="button">削除  <i class="far fa-trash-alt fa-xs"></i></a>
+    </div>
+</div>
+{% endblock %}
